@@ -5,11 +5,18 @@
   "main": "index.js",
   "scripts": {
     "open:cypress": "cypress open",
+    "run:cypress": "cypress run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Brahian Calo",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.6.0"
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.4",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^12.6.0",
+    "ts-loader": "^9.4.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/support/step_definitions/**/*.js"
   }
 }
