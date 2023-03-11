@@ -4,4 +4,8 @@ export default class BasePage {
     cy.visit(this.pageUrl);
     return this;
   }
+
+  protected typeInField(selector: string, text: string) {
+    cy.get(selector).type(text);
+  }
 }

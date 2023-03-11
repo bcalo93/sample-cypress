@@ -5,4 +5,19 @@ export default class LoginPage extends BasePage {
     super();
     this.pageUrl = 'http://www.webdriveruniversity.com/Login-Portal/index.html';
   }
+
+  typeUsername(username: string) {
+    this.typeInField('#text', username)
+    return this;
+  }
+
+  typePassword(password: string) {
+    this.typeInField('#password', password)
+    return this;
+  }
+
+  submitForm() {
+    cy.get('#login-button').click();
+    return this;
+  }
 }

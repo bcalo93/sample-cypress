@@ -8,6 +8,15 @@ describe('Login', () => {
   });
 
   it('logins successfuly', () => {
-    loginPage.navigate()
+    const stub = cy.stub();
+    cy.on('window:alert', stub);
+    loginPage
+      .navigate()
+      .typeUsername('webdriver')
+      .typePassword('webdriver123')
+      .submitForm();
+
+    expect(true).to.equal(false);
+    expect(stub).to.have.been.calledWith('validation succeeded');
   });
 });
