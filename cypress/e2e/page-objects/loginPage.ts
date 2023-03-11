@@ -17,7 +17,6 @@ export default class LoginPage extends BasePage {
   }
 
   submitForm() {
-    cy.get('#login-button').click();
-    return this;
+    return cy.get('#login-button').click();
   }
 }
