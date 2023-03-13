@@ -16,7 +16,7 @@ describe('Login', () => {
       .typeUsername('webdriver')
       .typePassword('webdriver123')
       .submitForm()
-      .then(() => expect(stub).to.be.calledWith('validation succeeded'));
+      .should(() => expect(stub).to.be.calledWith('validation succeeded'));
   });
 
   it('logins failed', () => {
@@ -28,6 +28,6 @@ describe('Login', () => {
       .typeUsername('webdriver')
       .typePassword('webdriver')
       .submitForm()
-      .then(() => expect(stub).to.be.calledWith('validation failed'));
+      .should(() => expect(stub).to.be.calledWith('validation failed'));
   });
 });

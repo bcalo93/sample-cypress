@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "open:cypress": "cypress open",
+    "open:cypress:mobile": "CYPRESS_VIEWPORT_WIDTH=375 CYPRESS_VIEWPORT_HEIGHT=667 cypress open",
     "run:cypress": "cypress run",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "contact:us": "cypress run -e TAGS=\"@contact-us\" --headed"
   },
   "author": "Brahian Calo",
   "license": "ISC",
@@ -19,6 +20,10 @@
     "typescript": "^4.9.5"
   },
   "cypress-cucumber-preprocessor": {
-    "stepDefinitions": "cypress/support/step_definitions/**/*.js"
+    "stepDefinitions": "cypress/support/step_definitions/**/*.js",
+    "html": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-html/cucumber-report.html"
+    }
   }
 }
