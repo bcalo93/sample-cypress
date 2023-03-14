@@ -7,12 +7,12 @@ export default class LoginPage extends BasePage {
   }
 
   typeUsername(username: string) {
-    this.typeInField('#text', username)
+    this.typeInField('#text', username);
     return this;
   }
 
   typePassword(password: string) {
-    this.typeInField('#password', password)
+    this.typeInField('#password', password);
     return this;
   }
 
