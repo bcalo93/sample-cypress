@@ -1,6 +1,7 @@
 @login @regression
 Feature: WebdriverUniversity - Login Page
   Background: Pre conditions
+    When I wait for 0 seconds
     Given I navigate to the WebdriverUniversity homepage
     When I click the Login Portal button
 
