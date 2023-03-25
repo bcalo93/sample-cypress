@@ -2,8 +2,7 @@
 Feature: WebdriverUniversity - Login Page
   Background: Pre conditions
     When I wait for 0 seconds
-    Given I navigate to the WebdriverUniversity homepage
-    When I click the Login Portal button
+    Given I navigate to the WebdriverUniversity login page
 
   Scenario: Successful Login
     And I type a username webdriver

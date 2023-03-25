@@ -1,19 +1,16 @@
 import { Given, When } from "@badeball/cypress-cucumber-preprocessor";
+import Homepage_PO from "../page-objects/Homepage_PO";
 
-const URL = "http://www.webdriveruniversity.com/";
+const page = new Homepage_PO();
 
 Given('I navigate to the WebdriverUniversity homepage', () => {
-  cy.visit(URL);
+  page.navigate();
 });
 
 When('I click on the contact us button', () => {
-  cy.get('#contact-us')
-    .invoke('removeAttr', 'target')
-    .click();
+  page.clickOn_ContactUs_Button();
 });
 
 When('I click the Login Portal button', () => {
-  cy.get('#login-portal')
-  .invoke('removeAttr', 'target')
-  .click();
+  page.clickOn_Login_Button();
 });
